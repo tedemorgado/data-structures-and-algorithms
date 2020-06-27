@@ -1,0 +1,15 @@
+Big O notation
+    - constants is not a factor in the time complexity
+    - "n" determine the growth rate
+
+
+https://en.wikipedia.org/wiki/Big_O_notation#/media/File:Comparison_computational_complexity.svg
+O(1) - Constant
+O(log n) - Logarithmic
+O(n) -> Linear
+O(n log n) - n log-star n
+O(n^2) - Quadratic
+
+
+Algorithms:
+    - Bubble sort: O(n^2)
