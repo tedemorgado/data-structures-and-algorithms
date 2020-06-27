@@ -1,30 +1,18 @@
 package bubble;
 
 import java.util.Arrays;
+import java.util.Objects;
+
+import utils.Util;
 
 public class Bubble
 {
     
     public static void main(final String[] args)
     {
-        final int[] valuesToSort = createArray();
-        bubbleSort(valuesToSort);
+        final int[] valuesToSort = Util.createUnsortedArray();
+        sort(valuesToSort);
         System.out.println(Arrays.toString(valuesToSort));
-    }
-    
-    private static int[] createArray()
-    {
-        final int[] intArray = new int[7];
-        
-        intArray[0] = 20;
-        intArray[1] = 35;
-        intArray[2] = -15;
-        intArray[3] = 7;
-        intArray[4] = 55;
-        intArray[5] = 1;
-        intArray[6] = -22;
-        
-        return intArray;
     }
     
     /*
@@ -38,8 +26,13 @@ public class Bubble
                 - 35 is bigger than -15, so we swap them
             - repeat
      */
-    private static void bubbleSort(final int[] arrayToSort)
+    private static void sort(final int[] arrayToSort)
     {
+        if(Objects.isNull(arrayToSort) || arrayToSort.length <= 1)
+        {
+            return;
+        }
+    
         for (int lastIndex = arrayToSort.length - 1; lastIndex > 0; --lastIndex)
         {
             for (int firstIndex = 0; firstIndex < lastIndex; ++firstIndex)
@@ -47,16 +40,9 @@ public class Bubble
                 final int nextPosition = firstIndex + 1;
                 if(arrayToSort[firstIndex] > arrayToSort[nextPosition])
                 {
-                    swapValues(arrayToSort, firstIndex, nextPosition);
+                    Util.swapValues(arrayToSort, firstIndex, nextPosition);
                 }
             }
         }
-    }
-    
-    private static void swapValues(final int[] array, final int firstIndex, final int secondIndex)
-    {
-        final int currentValue = array[firstIndex];
-        array[firstIndex] = array[secondIndex];
-        array[secondIndex] = currentValue;
     }
 }
