@@ -10,6 +10,8 @@ O(n) -> Linear
 O(n log n) - n log-star n
 O(n^2) - Quadratic
 
+Unstable sort - Duplicated values do not preserve the original order, this is, the first duplicated value can appear after the second duplicated value after the sort.
+Stable sort - Duplicated values preserve the original order, this is, the first duplicated value appears before the second duplicated value after the sort
 
 Algorithms:
     - Bubble sort: O(n^2)
