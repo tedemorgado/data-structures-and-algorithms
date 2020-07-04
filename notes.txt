@@ -16,4 +16,5 @@ Stable sort - Duplicated values preserve the original order, this is, the first 
 Algorithms:
     - Bubble sort: O(n^2)
     - Selection sort: O(n^2)
-    - Insertion sort: o(n^2)
+    - Insertion sort: O(n^2)
+    - Shell sort: O(n^2)
